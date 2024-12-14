@@ -1,0 +1,13 @@
+{
+  "extensions": [".py",".c",".cpp"],
+  "specific_files": [
+    
+  ],
+  "skip_folders": [
+    "*/dist",
+    "*/build",
+    "*/.git",
+    "*/.vscode",
+    "*/samples"
+  ]
+}

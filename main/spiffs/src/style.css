@@ -1,0 +1,254 @@
+:root {
+  /* Black Overlay */ 
+  --black_overlay_1:       #0000001A;  /* 10% opacity */ 
+  --black_overlay_2:       #00000033;  /* 20% opacity */ 
+  --black_overlay_3:       #0000004D;  /* 30% opacity */ 
+  --black_overlay_4:       #00000066;  /* 40% opacity */ 
+  --black_overlay_5:       #00000080;  /* 50% opacity */ 
+  --black_overlay_6:       #00000099;  /* 60% opacity */ 
+  --black_overlay_7:       #000000B2;  /* 70% opacity */ 
+  --black_overlay_8:       #000000CC;  /* 80% opacity */ 
+  --black_overlay_9:       #000000E6;  /* 90% opacity, almost opaque */ 
+   
+  /* White Overlay */
+  --white_overlay_1:       #FFFFFF1A;  /* 10% opacity */ 
+  --white_overlay_2:       #FFFFFF33;  /* 20% opacity */ 
+  --white_overlay_3:       #FFFFFF4D;  /* 30% opacity */ 
+  --white_overlay_4:       #FFFFFF66;  /* 40% opacity */ 
+  --white_overlay_5:       #FFFFFF80;  /* 50% opacity */ 
+  --white_overlay_6:       #FFFFFF99;  /* 60% opacity */ 
+  --white_overlay_7:       #FFFFFFB2;  /* 70% opacity */ 
+  --white_overlay_8:       #FFFFFFCC;  /* 80% opacity */ 
+  --white_overlay_9:       #FFFFFFE6;  /* 90% opacity, almost opaque */ 
+   
+  /* Black & White */ 
+  --chinese_black:         #141414; 
+  --midnight_coal:         #151515; 
+  --eclipse_black:         #131313; 
+  --deep_sea_obsidian:     #141515; 
+  --deep_sea_blue:         #131e31; 
+  --crimson_shadow:        #151414; 
+  --forest_silhouette:     #141313; 
+  --tin_soldier:           #BEBEBE; 
+  --light_silver:          #D9D9D9; 
+  --ghost_white:           #F8F8F8; 
+  --cats_cream:            #E7E6E3; 
+   
+  /* Warm Palette */ 
+  --cerise:                #DA4167; 
+  --burnt_sienna:          #E76F51; 
+  --jasper:                #D66853; 
+  --coral:                 #F78764; 
+  --bittersweet:           #FF595E; 
+  --blush:                 #EA638C; 
+  --misty_rose:            #FFD9DA; 
+  --burgundy:              #800020; 
+   
+  --sandy_brown:           #F4A261; 
+  --selective_yellow:      #FFB703; 
+  --sunglow:               #FFCA3A; 
+  --naples_yellow:         #F4D35E; 
+  --saffron:               #E9C46A; 
+  --peach:                 #F0B995; 
+  --beige:                 #EBEBD3; 
+  --brilliant_pearl:       #F5F0E3; 
+  --papaya_whip:           #FFECD1; 
+   
+  /* Cool Palette */ 
+  --rich_black:            #001524; 
+  --charcoal:              #364156; 
+  --berkeley_blue:         #1D3557; 
+  --yale_blue:             #083D77; 
+  --caribbean_Current:     #15616D; 
+  --cerulean:              #457B9D; 
+  --persian_green:         #2A9D8F; 
+  --tiffany_blue:          #99E1D9; 
+  --cobalt_blue:           #0047AB; 
+  --prussian_blue:         #023047; 
+  --yellow_green:          #8AC926; 
+  --diplo_green:           #50B185; 
+   
+  --brunswick_green:       #344E41; 
+  --fern_green:            #588157; 
+  --grayish_green:         #BCC4B9; 
+  --mint_cream:            #F0F7F4; 
+  --sage:                  #A3B18A; 
+   
+  --workoutd_blue:         #000814; 
+   
+  /* Brands */ 
+  --google_blue:           #4285F4; 
+  --google_yellow:         #F4B400; 
+  --google_red:            #DB4437; 
+  --google_green:          #0F9D58; 
+  --facebook_blue:         #3B5998; 
+  --coke_red:              #F40009; 
+  --starbucks_green:       #00704A; 
+  /* Fantasy Palette */ 
+  --rose:                  #F72585; 
+  --fandango:              #B5179E; 
+  --grape:                 #7209B7; 
+  --chrysler_blue:         #560BAD; 
+  --dark_blue:             #480CA8; 
+  --neon_blue:             #4361EE; 
+  --chefchaouen_Blue:      #4895EF; 
+  --vivid_sky_blue:        #4CC9F0; 
+  --fairy_dust:            #DABFFF;  /* A light, whimsical lavender */ 
+  --mermaid_tail:          #4DE0B5;  /* A vibrant, underwater teal */ 
+  --phoenix_feather:       #FF6B35;  /* A fiery, burnt orange */ 
+  --unicorn_mane:          #FEC8D8;  /* A soft, magical pink */ 
+  --dragon_scale:          #0E6BA8;  /* A deep, mythical blue */ 
+  --witches_brew:          #443737;  /* A dark, mysterious gray-brown */ 
+  --moon_beam:             #F1E4B3;  /* A gentle, luminous pale yellow */ 
+  --elf_wood:              #2B5D34;  /* A deep, enchanted forest green */ 
+  --pixie_dust:            #FFC1E1;  /* A playful, sparkling pink */ 
+  --stardust_gold:         #F0E68C;  /* A shimmering, celestial gold */ 
+  --unreal_blue:           #0F1226;  /* Unreal Engine */ 
+  --unreal_neon_purple:    #BB7EF1;  /* Unreal Engine */ 
+  --unreal_bluish_white:   #DCDEE2;  /* Unreal Engine */ 
+  --unity_blue:            #4191E3; /* Unity blue color*/ 
+  --robin_egg_blue:        #5AC9CA; /* Unity robin's egg color*/ 
+  --pale_violet:           #BE8CFF; 
+  --emerald_green:         #50C878; 
+}
+
+* {
+  border-radius: 5px;
+}
+
+html {
+  height: 100%;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif, monospace;
+  font-size: 16px;
+  color: var(--ghost_white);
+  overflow: hidden;
+}
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  } to {
+    background-position: -200% center;
+  }
+}
+body {
+  width: 100%; height: 100%;
+  background: 
+    linear-gradient(to right, 
+      #141118, #181b2b, #1a1224, #141118
+    )
+  ;
+  background-size: 200%;
+  margin: 0;
+  animation: background-pan 20s linear infinite;
+}
+
+h1,h2,h3 {
+  text-align: center;
+  text-transform: capitalize;
+}
+p,span,label {
+  font-size: 0.9rem;
+}
+
+
+input {
+  font-weight: 16px;
+}
+input[type="range"] {
+  appearance: none;
+  width: 100%; height: 7.5px;
+  margin: 10px 0;
+  background: transparent; /* Remove default track background */
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%; height: 10px;
+  border-radius: 10px;
+  background-color: var(--white_overlay_8);
+  box-shadow: 
+    inset -1px -1px 1px #ffffffbf,
+    inset 2px 2px 5.5px #000000a9
+  ;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px; height: 20px;
+  background: var(--pale_violet);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-25%);
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  background: var(--mermaid_tail);
+}
+
+
+input[type="number"] {
+  background-color: var(--black_overlay_2);
+  color: var(--emerald_green);
+  border: 1px solid var(--white_overlay_3);
+  padding: 3px;
+}
+
+select {
+  padding: 3px;
+  border: 1px solid var(--white_overlay_3);
+  background-color: var(--black_overlay_2);
+  color: var(--emerald_green);
+  font-weight: 500;
+}
+select:hover {
+  color: var(--mermaid_tail);
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+.flex-row
+, .flex-col {
+  display: flex;
+  flex-wrap:      nowrap;
+  white-space:    nowrap;
+  gap: 5px;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.full-w {
+  width: 100%;
+}
+.full-h {
+  height: 100%;
+}
+
+
+
+#stream-wrapper {
+  align-items:     center;
+  justify-content: center;
+  width: 98%; height: 70%;
+  
+  border-radius: 10px;
+  background-color: black;
+}
+#video-canvas {
+  width: 100%;
+}
+
+#einstellungen-container {
+  height:   25%;
+  overflow: scroll;
+}
+
+#einstellungen-container .flex-row > * {
+  width: 30%;
+}

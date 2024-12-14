@@ -1,0 +1,68 @@
+<!-- main/spiffs/index.html  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32-CAM Web Server</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <script type="module" src="/src/entryDeferred.js" defer></script>
+</head>
+
+<body>
+  <div class='flex-col full-w full-h' style="padding: 10px;">
+    <!-- <h2>ESP32-CAM Module Viewport</h2> -->
+  
+    <div id="stream-wrapper" class="flex-col">
+      <canvas id="video-canvas"></canvas>
+    </div>
+    
+    
+    <div id="einstellungen-container" class="flex-col">
+      <div class="flex-row">
+        <div class="flex-col">
+          <label for="brightness">brightness: <span></span></label>
+          <input type="range" id="brightness" name="brightness" min="-2" max="2" value="0" onchange="updateRangeValue(this)">
+
+          <label for="ae_level">ae_level: <span></span></label>
+          <input type="range" id="ae_level" name="ae_level" min="-2" max="2" value="0" onchange="updateRangeValue(this)">
+
+          <label for="aec_value">aec_value: <span></span></label>
+          <input type="range" id="aec_value" name="aec_value" min="0" max="1200" value="0" onchange="updateRangeValue(this)">
+          
+          <label for="sharpness">sharpness: <span></span></label>
+          <input type="range" id="sharpness" name="sharpness" min="-10" max="1200" value="0" onchange="updateRangeValue(this)">
+          
+          <label for="saturation">saturation: <span></span></label>
+          <input type="range" id="saturation" name="saturation" min="-10" max="10" value="0" onchange="updateRangeValue(this)">
+        </div>
+        <div class="flex-col">
+          <label for='frame_size'>Frame Size:</label>
+          <select id='frame_size'>
+            <option value='QQVGA'>QQVGA (160x120)</option>
+            <option value='QCIF'>QCIF (176x144)</option>
+            <option value='QVGA' selected>QVGA (320x240)</option>
+            <option value='CIF'>CIF (400x296)</option>
+            <option value='HVGA'>HVGA (480x320)</option>
+            <option value='VGA'>VGA (640x480)</option>
+            <option value='SVGA'>SVGA (800x600)</option>
+            <option value='XGA'>XGA (1024x768)</option>
+            <option value='SXGA'>SXGA (1280x1024)</option>
+            <option value='UXGA'>UXGA (1600x1200)</option>
+          </select>
+          
+          <label for='frame_rate'>Frame Rate (FPS):</label>
+          <input type='number' id='frame_rate' min='1' max='30' value='5' />
+          
+          <label for='jpeg_quality'>JPEG Quality (10-63):</label>
+          <input type='range' id='jpeg_quality' min='10' max='63' value='15' />
+          
+          <label for="special_effect">special_effect</label>
+          <input type="range" id="special_effect" name="special_effect" min="0" max="6" value="0">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
