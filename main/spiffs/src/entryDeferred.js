@@ -134,10 +134,14 @@ const inputs = {
   jpeg_quality:   document.getElementById("jpeg_quality"),
   brightness:     document.getElementById("brightness"),
   ae_level:       document.getElementById("ae_level"),
+  aec:            document.getElementById("aec"),
   aec_value:      document.getElementById("aec_value"),
   special_effect: document.getElementById("special_effect"),
   sharpness:      document.getElementById("sharpness"),
   saturation:     document.getElementById("saturation"),
+  colorbar:       document.getElementById("colorbar"),
+  denoise:        document.getElementById("denoise"),
+  contrast:       document.getElementById("contrast"),
 };
 
 function sendSettingUpdate(field, value) {
@@ -170,22 +174,27 @@ function sendSettingUpdate(field, value) {
 
 
 
-for (const [field, element] of Object.entries(inputs)) {
-  if (element.tagName.toLowerCase() === 'input' && element.type === 'range') {
-    element.addEventListener('input', debounce(function(event) {
-      const value = parseInt(event.target.value, 10);
-      sendSettingUpdate(field, value);
-    }, 300));
-  } else {
-    element.addEventListener('change', function(event) {
-      let value = event.target.value;
-      if (event.target.type === 'number') {
-        value = parseInt(value, 10);
-      }
-      sendSettingUpdate(field, value);
-    });
+document.addEventListener("DOMContentLoaded", ()=> {
+  for (const [field, elem] of Object.entries(inputs)) {
+    if (elem.tagName.toLowerCase() === 'input' && elem.type === 'range') {
+      elem.addEventListener('input', debounce(
+        function(event) {
+          const value = parseInt(event.target.value, 10);
+          sendSettingUpdate(field, value);
+        }, 300)
+      );
+    } else {
+      elem.addEventListener('change', function(event) {
+        let value = event.target.value;
+        if (event.target.type === 'number') {
+          value = parseInt(value, 10);
+        }
+        sendSettingUpdate(field, value);
+      });
+    }
   }
-}
+});
+
 
 
 

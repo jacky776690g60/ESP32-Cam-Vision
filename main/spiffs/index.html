@@ -27,14 +27,26 @@
           <label for="ae_level">ae_level: <span></span></label>
           <input type="range" id="ae_level" name="ae_level" min="-2" max="2" value="0" onchange="updateRangeValue(this)">
 
-          <label for="aec_value">aec_value: <span></span></label>
+          <label for="aec">Enable aec (Auto Exposure Control): <span></span></label>
+          <input type="range" id="aec" name="aec" min="0" max="1" value="0" onchange="updateRangeValue(this)">
+          <label for="aec_value">aec_value (Auto Exposure Control): <span></span></label>
           <input type="range" id="aec_value" name="aec_value" min="0" max="1200" value="0" onchange="updateRangeValue(this)">
-          
+        </div>
+        <div class="flex-col">
           <label for="sharpness">sharpness: <span></span></label>
           <input type="range" id="sharpness" name="sharpness" min="-10" max="1200" value="0" onchange="updateRangeValue(this)">
           
+          <label for="denoise">denoise: <span></span></label>
+          <input type="range" id="denoise" name="denoise" min="0" max="1200" value="0" onchange="updateRangeValue(this)">
+          
+          <label for="contrast">contrast: <span></span></label>
+          <input type="range" id="contrast" name="contrast" min="-2" max="2" value="0" onchange="updateRangeValue(this)">
+
           <label for="saturation">saturation: <span></span></label>
-          <input type="range" id="saturation" name="saturation" min="-10" max="10" value="0" onchange="updateRangeValue(this)">
+          <input type="range" id="saturation" name="saturation" min="-2" max="2" value="0" onchange="updateRangeValue(this)">
+          
+          <label for="colorbar">colorbar: <span></span></label>
+          <input type="range" id="colorbar" name="colorbar" min="0" max="1" value="0" onchange="updateRangeValue(this)">
         </div>
         <div class="flex-col">
           <label for='frame_size'>Frame Size:</label>
@@ -54,11 +66,11 @@
           <label for='frame_rate'>Frame Rate (FPS):</label>
           <input type='number' id='frame_rate' min='1' max='30' value='5' />
           
-          <label for='jpeg_quality'>JPEG Quality (10-63):</label>
-          <input type='range' id='jpeg_quality' min='10' max='63' value='15' />
+          <label for='jpeg_quality'>JPEG Quality (10-63): <span></span></label>
+          <input type='range' id='jpeg_quality' min='10' max='63' value='15' onchange="updateRangeValue(this)"/>
           
-          <label for="special_effect">special_effect</label>
-          <input type="range" id="special_effect" name="special_effect" min="0" max="6" value="0">
+          <label for="special_effect">special_effect <span></span></label>
+          <input type="range" id="special_effect" name="special_effect" min="0" max="6" value="0" onchange="updateRangeValue(this)">
         </div>
       </div>
     </div>
