@@ -1,6 +1,6 @@
-Espressif is <u>C-Based</u>, so use `main.c` is more straight forward and comform to the default way. In this project, I use command line and VSCode to build the project. (Also don't need the ESP-IDF extension. It is optional.)
+Espressif is <u>C-Based</u>, so using `main.c` is more straight forward and comform to the default way. In this project, I use command line and VSCode to build the project. (Also don't need the ESP-IDF extension. It is optional.)
 
-You can also use Arduino IDE to build staff with ESP32.
+You can also use Arduino IDE, or VSCode's extension to build staff with ESP32.
 
 <img alt="sample1" src="samples/sample1.png" width="500" height="500"/>
 
@@ -101,6 +101,15 @@ The provided `partitions.csv` file defines the partition layout for an ESP32 mic
 - **Size:** The size allocated to the partition (in hexadecimal).
 - **Flags:** Additional attributes or markers for the partition (often left blank).
 
+
+# **sdkconfig**
+
+Configure you wifi username and password with the following var names:
+
+```shell
+CONFIG_WIFI_SSID="xxxxx_wifi"
+CONFIG_WIFI_PASSWORD="xxxxxxx"
+```
 
 
 <h1 id="webserver" style="font-weight: 700; text-transform: capitalize; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #F4B400;">&#9698; webserver</h1>

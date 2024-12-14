@@ -52,7 +52,7 @@ function paintFrame(b64) {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => { 
-      if (canvas.width !== img.width || canvas.height !== img.height) { // resized only once when loaded
+      if (canvas.width !== img.width || canvas.height !== img.height) {
         canvas.width  = img.width;
         canvas.height = img.height;
       }
@@ -70,7 +70,7 @@ async function startStreaming() {
   if (isStreaming) return;
   isStreaming = true;
   /** @note Start fetching and displaying concurrently */
-  // fetchFrames();
+  fetchFrames();
   displayFrames();
 }
 
@@ -86,6 +86,29 @@ window.addEventListener('beforeunload', stopStreaming);
 
 
 
+function resizeCanvas() {
+  const canvas = document.getElementById('video-canvas');
+  const parent = canvas.parentElement;
+
+  // Get the computed styles of the parent to determine size
+  const parentStyles = window.getComputedStyle(parent);
+  const width = parseInt(parentStyles.getPropertyValue('width'), 10);
+  const height = parseInt(parentStyles.getPropertyValue('height'), 10);
+
+  // Handle High-DPI (Retina) Displays
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  // Optionally, clear the canvas or redraw existing content if necessary
+  ctx.clearRect(0, 0, width, height);
+}
+window.addEventListener("resize", debounce(resizeCanvas, 100));
 
 
 
