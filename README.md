@@ -2,7 +2,7 @@ Espressif is <u>C-Based</u>, so using `main.c` is more straight forward and comf
 
 You can also use Arduino IDE, or VSCode's extension to build staff with ESP32.
 
-<img alt="sample1" src="samples/sample1.png" width="500" height="500"/>
+<img alt="sample1" src="samples/sample1.png" width="700" height="500"/>
 
 > <h2 id='toc0'>Table of Content</h2>
 
@@ -106,10 +106,15 @@ The provided `partitions.csv` file defines the partition layout for an ESP32 mic
 
 Configure you wifi username and password with the following var names:
 
-```shell
-CONFIG_WIFI_SSID="xxxxx_wifi"
-CONFIG_WIFI_PASSWORD="xxxxxxx"
-```
+1. Create a file `kconfig.projbuild` in `main/`, if you don't have this file.
+2. Run `idf.py menuconfig` -> `Wi-FI Configuration` (according to your `kconfig` file)
+3. Set your wifi SSID and password here.
+4. After that, you should be able to see the configuration in your `sdkconfig` file.
+   ```shell
+   CONFIG_WIFI_SSID="xxxxx_wifi"
+   CONFIG_WIFI_PASSWORD="xxxxxxx"
+   ```
+
 
 
 <h1 id="webserver" style="font-weight: 700; text-transform: capitalize; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #F4B400;">&#9698; webserver</h1>
